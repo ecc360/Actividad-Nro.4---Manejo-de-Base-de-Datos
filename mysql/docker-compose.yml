@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: bd2024+
+      MYSQL_DATABASE: actividad4
+      MYSQL_USER: tienda
+      MYSQL_PASSWORD: tienda2024*
+    ports:
+      - "3306:3306" # Puerto de MySQL
+    command: ["--bind-address=0.0.0.0"] # Permite conexiones desde todos los destinos
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ropa Deportiva Estiven y Juan</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css"> <!-- Enlace al archivo de estilos CSS -->
+</head>
+<body>
+    <header>
+        <h1>Ropa Deportiva Estiven y Juan</h1>
+        <nav>
+            <ul>
+                <!-- Menú de navegación -->
+                <li><a href="#nuestra-tienda">Nuestra Tienda On-line</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contáctenos</a></li>
+                <li><a href="#diseña-tu-cuento">Diseña tu cuento</a></li>
+                <li><a href="#solicitud">Solicitud de Servicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="nuestra-tienda" class="section">
+        <h2>Nuestra Tienda On-line</h2>
+        <p>Bienvenidos a nuestra tienda de ropa deportiva. Aquí encontrarás una amplia selección de productos para tus actividades deportivas.</p>
+    <div class="image-container">
+        <img src="https://media.gq.com/photos/62a0ed55ff508eb95f828ccc/master/w_1600%2Cc_limit/UNION_los_angeles_gq_003.jpg" alt="Imagen tienda">
+    </div>
+        <!-- Contenido de la sección "Nuestra Tienda On-line" -->
+    </section>
+
+    <section id="servicios" class="section">
+        <h2>Servicios</h2>
+        <ul>
+            <!-- Lista de servicios -->
+            <li>Personalización de productos</li>
+            <li>Venta de productos</li>
+            <li>Cotizaciones</li>
+        </ul>
+        <!-- Agregar video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PUIcM4A_ut0" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="contacto" class="section">
+        <h2>Contáctenos</h2>
+        <p>Puedes contactarnos a través de los siguientes medios:</p>
+        <ul>
+            <!-- Información de contacto -->
+            <li>WhatsApp: 310 455 2907</li>
+            <li>PBX: 304 421 0341</li>
+            <li>Celular: 310 455 2907</li>
+            <li>Dirección: Carrera 92 cc # 53d - 40 Calasanz, Medellin, Colombia</li>
+        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.537383450914!2d-75.61659323358334!3d6.243734797429134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f7e44f836a9%3A0x3d9c1787ff7d1635!2sCarrera%2092%20cc%20%2353d-40%2C%20Medellin%2C%20Antioquia%2C%20Colombia!5e0!3m2!1sen!2sus!4v1645554347636!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  
+    <section id="diseña-tu-cuento" class="section">
+        <h2>Diseña tu cuento</h2>
+        <form id="cuento-form">
+            <label for="nombre">Nombres y apellidos:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="apodo">Apodo:</label><br>
+            <input type="text" id="apodo" name="apodo" required><br>
+
+            <label for="color-cabello">Color de Cabello:</label><br>
+            <input type="text" id="color-cabello" name="color-cabello" required><br>
+
+            <label for="color-ojos">Color de Ojos:</label><br>
+            <input type="text" id="color-ojos" name="color-ojos" required><br>
+
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad" required><br>
+
+            <label for="hobby">Hobby:</label><br>
+            <input type="text" id="hobby" name="hobby" required><br>
+
+            <input type="submit" value="Continuar">
+        </form>
+    </section>    
+  
+    <section id="solicitud" class="section">
+        <h2>Solicitud de Servicio</h2>
+        <form id="servicio-form" method="post" action="guardar_datos.php"> <!-- Cambiado el tipo de método y acción del formulario -->
+            <label for="cliente">Nombres y Apellidos:</label><br>
+            <input type="text" id="cliente" name="cliente" required><br>
+    
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="telefono">Número de celular:</label><br>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required><br>
+    
+            <label for="servicio">Servicio que solicita:</label><br>
+            <select id="servicio" name="servicio" required>
+                <option value="">Seleccione un servicio</option>
+                <option value="Personalización">Personalización</option>
+                <option value="Pedido Mayorista">Pedido Mayorista</option>
+                <option value="Devolución">Devolución</option>
+            </select><br>
+    
+            <!-- Cambiado el tipo de botón a "submit" -->
+            <input type="submit" value="Enviar datos">
+            <button type="button" onclick="window.location.href='consultar_datos.php?' + Math.random();" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Consultar datos</button>
+            <input type="reset" style="background-color: hsl(0, 100%, 50%); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" value="Cancelar">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa Deportiva. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo de script JavaScript -->
+    <script src="js/script.js"></script> <!-- Ruta relativa al archivo script.js dentro de la carpeta js -->
+</body>
+</html>
